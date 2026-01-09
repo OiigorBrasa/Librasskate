@@ -7,7 +7,7 @@
     
     <!-- Ícones (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Fonte Inter e Tailwind CSS (para agilizar o visual bonito) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,49 +28,16 @@
             }
         }
     </script>
-
-    <!-- ESTILOS PERSONALIZADOS (CSS) -->
-    <!-- Se fosse separado, isso iria no arquivo style.css -->
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* Efeito de seleção de texto */
-        ::selection {
-            background-color: #5200c8;
-            color: white;
-        }
-
-        /* Utilitários visuais */
-        .clip-polygon {
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-        
-        .text-stroke {
-            -webkit-text-stroke: 1px white;
-            color: transparent;
-        }
-        
-        .hover-text-fill:hover {
-            -webkit-text-stroke: 0px;
-            color: #5200c8;
-        }
-
-        /* Animações simples */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @font-face {
+            font-family: 'Drunken Hour';
+            src: url('font/DrunkenHourDEMO-Regular.woff2') format('woff2');
         }
     </style>
+
+    <!-- ESTILOS PERSONALIZADOS (CSS) -->
+    <link rel="stylesheet" href="src/style.css">
+    <!-- Se fosse separado, isso iria no arquivo style.css -->
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
 
@@ -79,8 +46,9 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center gap-2">
-                <div class="bg-roxo text-white p-2 font-black text-2xl tracking-tighter transform -skew-x-12">
-                    LIBRAS<span class="font-light">SKATER</span>
+                <div class="bg-roxo text-white p-2 font-black text-2xl tracking-tighter transform -skew-x-12 flex items-center gap-2"
+                style="font-family: 'Drunken Hour',sans-serif;">
+                    <div class="tracking-wider">Librasskater</div> <!-- <img src="img/Librasskate_logo.png" alt="LibrasSkater Logo" class="w-12 h-auto"> -->
                 </div>
             </div>
 
@@ -115,11 +83,11 @@
         <!-- SEÇÃO HERO (INÍCIO) -->
         <section id="home" class="relative min-h-screen flex items-center justify-center bg-zinc-900 overflow-hidden pt-20">
             <!-- Imagem de fundo com sobreposição -->
-            <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1564982752979-3f7bc974d29a?auto=format&fit=crop&q=80')] bg-cover bg-center bg-fixed mix-blend-luminosity"></div>
+            <div class="absolute inset-0 opacity-20 bg-[url('img/Librasskate_logo.png')] bg-cover bg-center bg-fixed mix-blend-luminosity"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-zinc-900"></div>
             
             <div class="container mx-auto px-4 relative z-10 text-center md:text-left fade-in">
-                <div class="inline-block mb-4 px-3 py-1 bg-roxo text-white font-bold uppercase text-xs tracking-widest transform -rotate-2">
+                <div class="inline-block mb-4 px-3 py-1 bg-roxo text-white font-bold uppercase text-xs tracking-widest transform -rotate-2 m-5">
                     Skate • Cultura • Inclusão
                 </div>
                 <h1 class="text-5xl md:text-7xl lg:text-9xl font-black text-white leading-tight mb-6 uppercase tracking-tighter">
@@ -130,7 +98,7 @@
                 <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mb-10 font-light border-l-4 border-roxo pl-6">
                     Diversificando a cena do skate com inclusão e cultura. A língua brasileira de sinais sobre rodas.
                 </p>
-                <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex flex-col md:flex-row gap-4 mb-4">
                     <a href="#projeto" class="group bg-roxo text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2">
                         Ver Proposta <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </a>
@@ -193,7 +161,7 @@
                         <ul class="space-y-4 text-gray-300">
                             <li class="flex items-start gap-3">
                                 <span class="bg-roxo text-white w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold flex-shrink-0">1</span>
-                                <p><strong>Duração:</strong> 25 minutos de imersão total.</p>
+                                <p><strong>Duração:</strong> 1 hora de imersão total.</p>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span class="bg-roxo text-white w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold flex-shrink-0">2</span>
@@ -237,29 +205,29 @@
                     <!-- Card 1 -->
                     <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all border-l-4 border-roxo group">
                         <h3 class="font-bold text-lg text-zinc-900 uppercase">Daniel Gonçalves</h3>
-                        <p class="text-xs text-roxo font-bold uppercase mb-2">Fundador & Intérprete</p>
+                        <p class="text-xs text-roxo font-bold uppercase mb-2">Fundador & Skatista</p>
                         <p class="text-sm text-gray-500">Skatista amador, modelo e organizador.</p>
                     </div>
 
                     <!-- Card 2 -->
                     <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all border-l-4 border-zinc-200 hover:border-roxo group">
-                        <h3 class="font-bold text-lg text-zinc-900 uppercase">Glenda Sales</h3>
-                        <p class="text-xs text-roxo font-bold uppercase mb-2">Intérprete & Organizadora</p>
-                        <p class="text-sm text-gray-500">Comunicadora.</p>
+                        <h3 class="font-bold text-lg text-zinc-900 uppercase">Pedro Henrique</h3>
+                        <p class="text-xs text-roxo font-bold uppercase mb-2">Skatista Surdo</p>
+                        <p class="text-sm text-gray-500">Comunicador e Músico.</p>
                     </div>
 
                     <!-- Card 3 -->
                     <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all border-l-4 border-zinc-200 hover:border-roxo group">
                         <h3 class="font-bold text-lg text-zinc-900 uppercase">Bruno Henrique</h3>
                         <p class="text-xs text-roxo font-bold uppercase mb-2">Skatista Surdo</p>
-                        <p class="text-sm text-gray-500">Comunicador.</p>
+                        <p class="text-sm text-gray-500">Comunicador e Palestrante.</p>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all border-l-4 border-zinc-200 hover:border-roxo group">
                         <h3 class="font-bold text-lg text-zinc-900 uppercase">Igor Reis</h3>
                         <p class="text-xs text-roxo font-bold uppercase mb-2">Skatista Surdo</p>
-                        <p class="text-sm text-gray-500">Comunicador.</p>
+                        <p class="text-sm text-gray-500">Desingner e Informática.</p>
                     </div>
 
                     <!-- Card 5 -->
@@ -280,11 +248,11 @@
                     <div class="bg-zinc-100 p-6 shadow-inner md:col-span-2 lg:col-span-2">
                         <h4 class="font-bold text-gray-700 uppercase mb-3">Também no time:</h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Pedro Henrique</span>
+                    <!--    <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Pedro Henrique</span> -->
                             <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Bianca Rocha</span>
                             <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Danilo França</span>
-                            <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Wagner</span>
-                            <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Isabelle</span>
+                    <!--    <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Wagner</span> -->
+                    <!--    <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Isabelle</span> -->
                             <span class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-600">Cristian Tadeu (Fotógrafo)</span>
                         </div>
                     </div>
@@ -306,7 +274,7 @@
                         <p class="text-gray-400 text-lg mb-8">
                             Quer apoiar o projeto, tirar dúvidas ou levar a oficina LibrasSkater para seu evento?
                         </p>
-                        
+
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
                                 <div class="bg-zinc-800 p-3 rounded text-roxo">
@@ -324,7 +292,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-white uppercase">Instagram</h4>
-                                    <p class="text-gray-400">@librasskater</p>
+                                    <a href="https://www.instagram.com/librasskater/" target="_blank"> <p class="text-gray-400">@librasskater</p></a>
                                 </div>
                             </div>
                         </div>
@@ -379,35 +347,8 @@
 
     <!-- SCRIPT JAVASCRIPT -->
     <!-- Se fosse separado, isso iria no arquivo script.js -->
-    <script>
-        // Inicializa os ícones
-        lucide.createIcons();
+    <script src="src/script.js">
 
-        // Menu Mobile
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const iconMenu = mobileBtn.querySelector('i');
-
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // Troca ícone (se estivesse usando biblioteca completa, aqui é simplificado)
-        });
-
-        // Fecha menu ao clicar em link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Formulário
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`);
-            this.reset();
-        });
     </script>
 </body>
 </html>
